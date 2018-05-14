@@ -1,0 +1,289 @@
+CPS125 - Final Exam - Sample multiple choice questions
+(See link at bottom of page for progeamming question samples)
+
+Type 1 - Binary conversions
+---------------------------
+1. 32 into signed integer binary
+a) 1000 0000 0000 0000 0000 0000 0101 1001
+b) 0000 0000 0000 0000 0000 0000 0000 1000
+c) 0000 0000 0000 0000 0000 0000 0001 0000
+d) 1000 0000 0000 0000 0000 0000 0010 0000
+e) none of the above
+
+2. 0000 0000 0000 0000 0000 0000 1100 0011 into integer decimal:
+a) 123  	
+b) 194  	
+c) 99  		
+d) 227  	
+e) none of the above
+
+3. 1100 0001 0100 0000 0000 0000 0000 0000 into floating point decimal
+a) 35 		
+b) -200 	
+c) -12 		
+d) -24 		
+e) none of the above
+
+4. 2A (hexadecimal) into decimal
+a) 21 		
+b) 35 	
+c) 42 		
+d) 68 		
+e) none of the above
+
+
+Type 2 - Identify the invalid expression (variables are int or int* and nonzero):
+---------------------------------------------------------------------------------
+5.
+a) a+b-0 
+b) c+-a%4 
+c) xm6-24 
+d) xf3r6+2
+e) all are valid
+
+6.
+a) ant+int 
+b) one+twx 
+c) three*3 
+d) four/-4
+e) all are valid
+
+
+Type 3: - Expression evaluation and printf:
+-------------------------------------------
+Assuming int a=10, b=5, c=1, d=2; double w=3.5, x=-5.0, y=2.5, z=1.0; What would be the exact output of the print statement? (# means a space)
+
+7.
+printf ("%3.2lf", -a+x);
+a) ###-5 
+b) -5.00 
+c) -5.0 
+d) -5.
+e) none of the above
+
+8.
+printf ("%-4d", 5-c/d);
+a) 2### 
+b) 4.5 
+c) 4 
+d) 5###
+e) none of these
+
+9.
+printf ("%d", strlen ("The Lord of the Rings"));
+
+a) 19		
+b) 20		
+c) 21		
+d) 22		
+e) none of the above
+
+10.
+printf ("%d", atoi ("33.33ff"));
+
+a) 33			
+b) 33.33		
+c) 3333
+d) 33.33ff		
+e) none of the above
+
+
+Type 4 - Choose the best answer
+-------------------------------
+
+11.
+What is the correct syntax of the while statement?
+a) while [x > 2]
+b) while {x > 2}
+c) while (x > 2)
+d) while x > 2
+e) none of the above
+
+12.
+Which C function allocates cells in an array dynamically and intializes all cells at zero?
+a) alloc
+b) calloc
+c) malloc
+d) free
+e) none of the above
+
+13.
+What is the value of d after this declaration? double d = 2 / 4 / 2;
+a) 0.0
+b) 0.25
+c) 0.5
+d) 0
+e) none of the above
+
+14.
+In C, what is the correct way to assign a value to a string variable named s?
+
+a) s = 'this is a string value';
+b) s = "this is a string value";
+c) s = strcpy ("this is a string value")
+d) strcpy (s, "this is a string value");
+e) none of the above
+
+15.
+What is the C keyword that creates a type alias?
+
+a) alias	
+b) synonym		
+c) type	
+d) typedef		
+e) none of the above
+
+16.
+What is the C keyword that counts the number of bytes in a variable or array?
+
+a) size	
+b) sizeof	   
+c) countb	
+d) nbytes		
+e) none of the above
+
+
+Type 5 - Choose the statement to solve a problem
+------------------------------------------------
+
+17.
+Check for a real number that is a whole (natural) number (for example, 14.0 is a whole number, 3.57 is not).
+a) if (whole (x)) 
+b) if (x == ceil(x))
+c) if (x = (int)x) 
+d) if (x == x)
+e) none of the above
+
+18.
+Identify the condition that will always be false.
+a) if (3 < x < 2) 
+b) if (x < 3 || x >= 2)
+c) if (x < 3 && x < 2) 
+d) if (x > 3 && x < 2)
+e) none of the above
+
+
+Type 6 - Complete a program by adding a missing line
+----------------------------------------------------
+
+19.
+#include <stdio.h>
+int
+main (void)
+{
+	int age, senior;
+	scanf ("%d", &age);
+	senior = age >= 65;
+	/* missing line here */
+		printf ("You do not qualify for the seniors discount\n");
+	else
+		printf ("You qualify for the seniors discount");
+	return (0);
+}
+a) if (senior) 
+b) if (!senior)
+c) if (senior == false) 
+d) if (senior >= 65)
+e) none of the above
+
+
+Type 7 - Whats the output? (tracing)
+------------------------------------
+
+20.
+#include <stdio.h>
+
+int cps (int mark, int *num)
+{
+	int gp;
+	gp = mark - 5;
+	*num = gp + mark;
+	return (gp);
+}
+int
+main (void)
+{
+	int tt=10, vv;
+	tt = cps (tt, &vv);
+	printf ("%d", tt+vv);
+	return (0);
+}
+
+a) 0
+b) 5
+c) 10
+d) 15
+e) none of the above
+
+
+21.
+#include <stdio.h>
+int cps (int mark)
+{
+	mark = mark-3;
+	return (mark);
+}
+int ckcs (int num)
+{
+	num= cps(num) /2;
+	return (num);
+}
+int
+main (void)
+{
+	int t=12;
+	t = ckcs (t)-1;
+	printf ("%d", t);
+	return (0);
+}
+
+a) 12
+b) 9
+c) 6
+d) 3
+e) none of the above
+
+
+22.
+#include <stdio.h>
+int main (void)
+{
+	int scalar_product, n, k;
+	int v1[]={2,3,1};
+	int v2[]={1,2,4};
+	scalar_product = 0;
+	n=3;
+	for (k=0; k<n; ++k)
+		scalar_product = scalar_product + v1[k]*v2[k];
+	printf ("The scalar product is: %d.", scalar_product);
+	return (0);
+}
+
+a) 2		b) 10		c) 12		d) 40
+e) none of the above
+
+
+23.
+#include <stdio.h>
+int toronto (int x)
+{
+     int w;
+	if (x == 0) w = 1; else w = toronto (x-1);
+	return (w);
+}
+	
+int main (void)
+{
+	int a = 2;
+	printf ("%d", toronto (a));
+	return (0);
+}
+
+a) 0		b) 1		c) 2		d) -1		
+e) none of the above
+
+NOTES:
+1. Answers will not be posted for these questions but you can validate the tracing questions in Quincy (or equivalent IDE) and the conversion questions using this website: http://www.binaryconvert.com/. For the other questions try you best and if not sure ask your professor.
+
+2. In this folder you will find a few exercises for the programming part, some coming form old exams. Ths years questions will be of course quite different: http://cps125.scs.ryerson.ca/exercises/
+2 min to Spreed
